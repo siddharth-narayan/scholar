@@ -16,8 +16,9 @@
   body,
   title: none,
   desc: none,
+  show-answers: true
 ) = {
-  [
+  box()[
     *#title*
 
     _#desc _
@@ -25,7 +26,7 @@
     #v(1em)
     #set enum(indent: 1em, spacing: 2em)
     
-    #body
+    #if show-answers { body }
 
     #v(3em)
   ]
@@ -35,7 +36,7 @@
   body,
   desc: none,
 ) = {
-  [
+  box()[
     _#desc _
     #v(1em)
     #body
