@@ -6,6 +6,11 @@ Simple formatting for creating homework assignments
   <img width="400" height="1010" alt="image" src="https://github.com/user-attachments/assets/77f732d2-4b7f-4c7e-9d34-daf0a6a4cd1d" />
 </p>
 
+# Installation
+Please follow the typst package manager's [instructions](https://github.com/typst/packages#local-packages) for installing an unofficial package locally.
+In short, copy the contents of this repository to {data-dir}/typst/packages/{namespace}/{name}/{version}.
+Nzamespace should likely be "local", name is of course "scholar" and version should be the same as the top level typst.toml
+
 # Usage
 There are three main functions
 - ```homework-header```: Set the title and author name. Date will be set automatically
@@ -17,6 +22,7 @@ This example creates the page shown at the top
 
 ```typst
 #import "@preview/finite:0.5.0": automaton, layout
+#import "@local/scholar:0.0.1": *
 #set text(size: 14pt)
 
 #homework-header(
