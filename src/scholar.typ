@@ -16,9 +16,10 @@
   body,
   title: none,
   desc: none,
-  show-answers: true
+  show-answers: true,
+  page-break: true,
 ) = {
-  box()[
+  let content_ = [
     *#title*
 
     _#desc _
@@ -30,16 +31,29 @@
 
     #v(3em)
   ]
+
+  if page-break {
+    content_
+  } else {
+    box(content_)
+  }
 }
 
 #let homework-subquestion(
   body,
   desc: none,
+  page-break: false,
 ) = {
-  box()[
+  let content_ = [
     _#desc _
     #v(1em)
     #body
     #v(2em)
   ]
+
+  if page-break {
+    content_
+  } else {
+    box(content_)
+  }
 }
